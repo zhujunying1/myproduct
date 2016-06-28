@@ -1,0 +1,40 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+*,
+*::before,
+*:after {
+  -webkit-box-sizing: border-box;
+}
+#article {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  background: #ddd;
+}
+#article #header {
+  width: 100%;
+  height: auto;
+}
+#article #header img {
+  width: 100%;
+  display: block;
+}
+#article #section {
+  -webkit-box-flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+#article #footer {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+}
+#article #footer dl {
+  -webkit-box-flex: 1;
+  text-align: center;
+  background: #fff;
+}

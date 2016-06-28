@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/zepto.min.js"></script>
+</head>
+<body>
+	<section>
+		<ul id="tab">
+			<li class="on">AAA</li>
+			<li>BBB</li>
+			<li>CCC</li>
+			<aside id="move"></aside>
+		</ul>
+		<address>
+			<div id="cont">
+				<nav>111</nav>
+				<nav>222</nav>
+				<nav>333</nav>
+			</div>
+		</address>
+	</section>
+	/*<script src="js/index.js"></script>*/
+	<script>
+		var index=0;
+		var len=$("#cont nav").length;
+		function auto(index){
+			var step=-index*100;
+			$("#tab li").eq(index).addClass("on").siblings().removeClass("on");
+			$("#cont").css("-webkit-transform","translateX("+step+"%)");
+		}
+		$("#tab li").on("tap",function(){
+			$(this).index();
+			auto(index);
+		})
+		$("#cont").on("swipeLeft",function(){
+			index++;
+			if(index>len-1) index=len-1;
+			auto(index);
+		})
+		$("#cont").on("swipeRight",function(){
+			index--;
+			if(index<=0) index=0;
+			auto(index);
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//设置播放进度
+		function test(){
+			var video=document.getElementById("video");
+			//duration: 返回视频或音频播放长度(秒)即:总播放时间
+			//alert(video.duration);
+			// currentTime: 设置或返回音视频的当前位置(秒)
+			//alert(video.currentTime);
+			if(video.duration==video.currentTime){
+				window.location="...";
+			}
+		}
+		//设置暂停
+		function stop(){
+			var video=document.getElementById("video");
+			video.pause();
+		}
+		//设置播放
+		function play(){
+			var video=document.getElementById("video");
+			video.play();
+		}
+		//设置静音 
+		//muted 静音 true   false  
+		function noVoice(){
+			var video=document.getElementById("video");
+			video.muted=true;
+		}
+	</script>
+</head>
+<body>
+	<video src="media.mp4" autoplay="autoplay" controls="controls" loop="loop" id="video">抱歉，您的浏览器不支持视频的播放</video>
+	<p>
+		<input type="button" value="显示播放进度" onclick="test()">
+		<input type="button" value="暂停" onclick="stop()">
+		<input type="button" value="播放" onclick="play()">
+		<input type="button" value="静音" onclick="noVoice()">
+	</p>
+</body>
+</html>

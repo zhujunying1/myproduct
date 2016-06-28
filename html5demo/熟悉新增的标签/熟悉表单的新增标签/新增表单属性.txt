@@ -1,0 +1,46 @@
+﻿form 新增常用属性：
+	formaction	重写表单的 action 属性
+    formenctype - 重写表单的 enctype 属性  了解
+    formmethod - 重写表单的 method 属性  get/post
+    formnovalidate - 重写表单的 novalidate 属性  了解
+    formtarget - 重写表单的 target 属性    了解
+    placeholder 描述输入域所期待的值  提示
+    autofocus 在页面加载(刷新)时，域自动地获得焦点  一个页面中只能出现一次
+    list  于datalist标记组成下拉列表  属性规定输入域的 datalist。datalist 是输入域的选项列表6
+    	<input type="text" list="demo">
+    	<datalist id="demo">
+    autocomplete 属性规定 form 或 input 域应该拥有自动完成功能  自动补全
+    required必须在提交之前填写输入域（不能为空）。
+
+	max 属性规定输入域所允许的最大值。
+
+    min 属性规定输入域所允许的最小值。
+    
+    step 属性为输入域规定合法的数字间隔（如果 step="3"，则合法的数是 -3,0,3,6 等）。
+
+
+	html5 
+    checkValidity  js代码  input （select textarea） 都有 checkValidity() 了解
+
+	<input type="email" id="em">
+    <input type="button" onClick="check();">
+    <script type="text/javascript">
+		var em = document.getElementById("em");
+		if(em.checkValidity()){
+			alert("ok")	
+		}else{
+			alert("no")	
+		}
+    </script>
+    novalidate  form属性  在提交表单时不应该验证 form 或 input 域
+    <form novalidate>
+    
+    formnovalidate 重写表单的 novalidate 属性
+    
+  
+
+
+	    
+    
+    
+    

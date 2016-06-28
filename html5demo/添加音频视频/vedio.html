@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 第一种方法 -->
+
+	<!-- autoplay设置在加载完成后是否自动播放
+	controls设置是否显示播放控件
+	loop设置是否循环播放
+	此外还可以设置宽度，高度
+	 -->
+	<video src="media.mp4" autoplay="autoplay" controls="controls" loop="loop">抱歉，您的浏览器不支持视频的播放</video><br/>
+
+	<!-- 第二种方法 -->
+	<video autoplay="autoplay" controls="controls" loop="loop">
+		<source src="media.mp4" type="video/mp4"></source>
+		抱歉，您的浏览器不支持音频的播放
+	</video>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>折叠菜单</title>
+    <meta charset="UTF-8">
+    <style>
+        *{ margin: 0; padding: 0}
+        .box{ width: 400px; margin: 0 auto;}
+        .box p{ height: 60px; line-height: 60px; background: blue; color: whitesmoke; text-align: center; border-bottom: greenyellow 1px solid; font-size: 20px; font-weight: bold}
+        .box ul li{ list-style: none; background: gainsboro; color: white; border-bottom: 1px solid black; text-align: center;line-height: 60px; height: 60px; font-size: 20px}
+        .box ul li a{ text-decoration: none; display: block; }
+    </style>
+</head>
+<body>
+    <div class="box">
+       <p>视觉设计</p>
+        <ul>
+            <li><a href="#"> Photoshop</a></li>
+            <li><a href="#"> Dreamweaver</a></li>
+            <li><a href="#"> illustrator</a></li>
+            <li><a href="#"> flash</a></li>
+        </ul>
+        <p>web前端开发</p>
+        <ul>
+            <li><a href="#"> HTML</a></li>
+            <li><a href="#"> CSS</a></li>
+            <li><a href="#"> JavaScript</a></li>
+        </ul>
+        <p>PHP开发</p>
+        <ul>
+            <li><a href="#"> Apache</a></li>
+            <li><a href="#"> PHP</a></li>
+            <li><a href="#"> MySQL</a></li>
+        </ul>
+    </div>
+<script>
+     var ps,uls,lis,i,j,as,source;
+    ps=document.getElementsByTagName("p")
+    uls=document.getElementsByTagName("ul")
+     as=document.getElementsByTagName("a")
+
+    for(i=0;i<3;i++)
+    {
+        ps[i].index=i
+        ps[i].onclick=function()
+        {
+            for(j=0;j<3;j++)
+            {
+                uls[j].style.display="none";
+            }
+            uls[this.index].style.display="block";
+        }
+    }
+     for(i=0;i<10;i++)
+     {
+         as[i].onclick=function()
+         {
+             alert("欢迎您来到"+this.innerHTML+"课程的学习，开始您的学习之旅吧！")
+         }
+     }
+    for(i=0;i<3;i++)
+    {
+        ps[i].onmouseover=function()
+        {
+            this.style.background="yellowgreen";
+            this.style.color="darkviolet"
+        }
+        ps[i].onmouseout=function()
+        {
+            this.style.background="";
+            this.style.color=""
+        }
+    }
+ for(i=0;i<10;i++)
+    {
+        as[i].onmouseover=function()
+        {
+            this.style.background="yellow"
+            this.style.color="red"
+        }
+        as[i].onmouseout=function()
+        {
+            this.style.background="";
+            this.style.color=""
+        }
+    }
+</script>
+
+
+</body>
+</html>

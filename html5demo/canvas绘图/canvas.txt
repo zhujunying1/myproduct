@@ -1,0 +1,44 @@
+﻿canvas
+1 canvas:
+h5中 canvas 元素  配合  javascript 可以在页面 绘制图像
+canvas 画布：一个矩形区域，可以控制其中的每一个元素。
+canvas 拥有多种绘制路径（图形）,圆形 矩形 线性 字符....
+2  创建canvas
+<canvas id="myCanvas" width="200" height="100"></canvas>
+注意：
+	canvas元素本身 没有绘制能力，所有的绘制工作必须是 js完成
+    canvas 坐标： 所有图形 相对于画布 左上角来定位
+    使用canvas检测一下兼容性：
+    	<canvas>抱歉，你的浏览器不支持canvas</canvas>
+    	if(c.getContext){  //c.getContext 存在 true   0 0。0 null
+        	alert("ok");
+        }else{
+        	alert("no")
+        }
+   
+   1》 绘制直线：
+   	  等腰三角形
+   2》 矩形<hr />
+
+   3》 圆形
+   实心
+   fillStyle
+   fillRect
+   fill
+   空心
+   strokeStyle
+   strokeRect
+   stroke
+   
+  
+   
+   
+   4》清除画布： 画布中的内容
+   cxt.clearRect(x,y,w,h);	
+ 
+ 
+
+   
+   
+   	 
+    

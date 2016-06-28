@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<header>
+		<span id="h_back"></span>
+		<h1>付款</h1>
+	</header>
+	<article>
+		<nav id="nav">
+			<div id="nav_top">
+				<span id="pay_l_line"></span><span id="pay_r_line"></span>
+			</div>
+			<ul>
+				<li>
+					<dl>
+						<dt><img src="images/step1Icon2.png"></dt>
+						<dd>收款方</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><img src="images/step2Icon2.png"></dt>
+						<dd>付款方</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><img src="images/step3Icon.png"></dt>
+						<dd>确认</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><img src="images/step4Icon.png"></dt>
+						<dd>完成</dd>
+					</dl>
+				</li>
+			</ul>
+		</nav>
+		<section>
+			<form action="ok.html">
+				<ul id="data">
+					<li id="li1"><label for="bank">银行：</label><input type="text" id="bank" placeholder=""></li>
+					<li><label for="card">付款方卡号：</label><input type="number" id="card" placeholder="请输入15-20位银行卡号"></li>
+					<li><label for="phone">银行预留手机号：</label><input type="number" id="phone" placeholder="请输入13位有效手机号"></li>
+					<li><label for="code">验证码：</label><input type="text" id="code"placeholder="请输入4位验证码"></li>
+					<li style="border-bottom:none;"><label for="psd">交易密码：</label><input type="password" id="psd"></li>					
+				</ul>	
+				<input type="submit" id="sub">	
+			</form>
+		</section>
+	</article>
+	<footer>
+		<aside>
+			<dl>
+				<dt>你的当前转账额度</dt>
+				<dd>当前：<span>500</span></dd>
+			</dl>
+		</aside>
+		<aside id="r_right" style="text-align: right">
+			<dl>
+				<dt><a href="#">如何提升信用额度</a></dt>
+				<dd>单日累计：<span>500</span></dd>
+			</dl>
+		</aside>
+	</footer>
+</body>
+</html>

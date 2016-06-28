@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<canvas id="myCanvas" width="400" height="400">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var obj=document.getElementById("myCanvas");
+		var cxt3=obj.getContext("2d");
+		//绘制圆
+		/*cxt3.strokeStyle="#ff0000";
+		cxt3.beginPath();
+		cxt3.arc(100,100,100,0,Math.PI*0.5,true);
+		cxt3.closePath();
+		cxt3.stroke();*/
+
+		//绘制同心圆
+		for(var i=1;i<10;i++){
+			cxt3.strokeStyle="#ff0000";//设置边框色
+			cxt3.beginPath();
+			cxt3.lineWidth="5";//设置边框宽度
+			cxt3.arc(0,0,40*i,0,Math.PI*0.5,false);
+			//cxt3.closePath();
+			cxt3.stroke();//执行绘制边框
+		}
+	</script>
+</body>
+</html>

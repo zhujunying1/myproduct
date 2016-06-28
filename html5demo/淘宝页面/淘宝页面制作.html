@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>淘宝结算页面</title>
+    <meta charset="UTF-8">
+    <style>
+        .box{ width: 990px; margin: 0 auto; }
+        .box h1{ height: 28px; background: url("h1.bmp"); font-size: 12px; padding-left: 15px; padding-top: 20px;}
+            .b{ height: 110px; background: sandybrown; padding-top: 15px; padding-left: 10px}
+        .b input{ float: left}
+        .b ol{ float: right; padding-right: 15px; line-height: 20px; list-style: none}
+        .b ol li a{ text-decoration: none}
+        .b p{ float: left}
+        .b dl{ float: left; padding-left: 20px}
+        .b dl dt{ float: left; padding-right: 10px;}
+        .b dl dt dd{width:100px; line-height: 20px; padding-right: 200px }
+        .b ul{ float: left; padding-right: 40px; padding-left: 40px; list-style: none; text-align: center}
+        .b ul li .text{ width: 80px; text-align: center}
+        .b b{ position: relative; top: 20px}
+        .b b span{ color: greenyellow}
+        h2{ height: 35px; font-size: 12px}
+        h2 img{ padding: 0 10px}
+        h2 a{ padding-left: 30px}
+        h2 span{ font-style: normal; color: orangered}
+       .b2 #a1{ float: right; width: 96px; height: 48px;  background: red; color: navajowhite; text-align: center; line-height: 48px; text-decoration: none }
+        .b2 a{ padding-left: 20px; padding-right: 20px}
+        .b2 ul{ float: right; list-style: none; margin-right: 20px}
+        .b2 form{ float: left}
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1><input type="checkbox"  name="checkbox">&nbsp;&nbsp;汇多食品旗舰店</h1>
+    <div class="b">
+        <ol>
+            <li><a href="#">删除</a></li>
+            <li><a href="#">移动到我的关注</a></li>
+        </ol>
+        <input type="checkbox"  name="checkbox">
+        <dl>
+            <dt><img src="p1.bmp"></dt>
+            <dd>你在哪发表费哈哈佛奥哈佛啊哈佛安抚发哦好烦和司法</dd>
+        </dl>
+        <p>26.80</p>
+        <ul>
+            <li><input type="button" value="-" name="button1"><input type="text"  name="texts" class="text" value="0"><input type="button"name="button2" value="+"></li>
+            <li>有货</li>
+        </ul>
+        <b>￥<span>0</span>元</b>
+
+    </div>
+    <h1><input type="checkbox" name="checkbox">&nbsp;&nbsp;汇多食品旗舰店</h1>
+    <h2><img src="p2.bmp">活动商品满150元，即可加价换购商品一件！<a href="#">去凑单>></a> </h2>
+    <div class="b">
+        <ol>
+            <li><a href="#">删除</a></li>
+            <li><a href="#">移动到我的关注</a></li>
+        </ol>
+        <input type="checkbox" name="checkbox">
+        <dl>
+            <dt><img src="p1.bmp"></dt>
+            <dd>你在哪发表费哈哈佛奥哈佛啊哈佛安抚发哦好烦和司法</dd>
+        </dl>
+        <p>39.00</p>
+        <ul>
+            <li><input type="button"name="button1" value="-"><input type="text" name="texts"class="text" value="0"><input type="button"name="button2" value="+"></li>
+            <li>有货</li>
+        </ul>
+        <b>￥<span>0</span>元</b>
+
+    </div>
+    <h1><input type="checkbox"  name="checkbox">&nbsp;&nbsp;汇多食品旗舰店</h1>
+    <h2><img src="p3.bmp">活动商品满200元！已减<span>0</span>元<a href="#">去凑单>></a> </h2>
+    <div class="b">
+        <ol>
+            <li><a href="#">删除</a></li>
+            <li><a href="#">移动到我的关注</a></li>
+        </ol>
+        <input type="checkbox" name="checkbox">
+        <dl>
+            <dt><img src="p1.bmp"></dt>
+            <dd>你在哪发表费哈哈佛奥哈佛啊哈佛安抚发哦好烦和司法</dd>
+        </dl>
+        <p>99.00</p>
+        <ul>
+            <li><input type="button" name="button1"value="-"><input type="text" name="texts"class="text" value="0"><input type="button" name="button2"value="+"></li>
+            <li>有货</li>
+        </ul>
+        <b>￥<span>0</span>元</b>
+    </div>
+
+    <div class="b2" style="clear: both">
+        <a href="#" id="a1">去结算</a>
+       <form> <input type="checkbox" name="checkbox" >
+        <a href="#">删除选中的商品</a>
+        <a href="#">移动到我的关注</a></form>
+        <ul>
+            <li>已选择<span>0</span>件商品。总价（不含运费）：<span>0</span>元</li>
+            <li>已节省：<span>0</span>元</li>
+        </ul>
+    </div>
+</div>
+<script>
+     var cb,button1,button2,texts,spans,as,check,a1,i,j;
+     checkbox=document.getElementsByName("checkbox");
+     button1=document.getElementsByName("button1");
+     button2=document.getElementsByName("button2");
+     texts=document.getElementsByName("texts")
+     spans=document.getElementsByTagName("span")
+     as=document.getElementsByTagName("a")
+     a1=document.getElementById("a1")
+     checkbox[6].onclick=function()
+     {
+         for(i=0;i<6;i++)
+         {
+             checkbox[i].checked=checkbox[6].checked;
+         }
+     }
+    button1[0].onclick=function()
+    {
+        if(parseFloat(texts[0].value)<=0)
+        {
+            texts[0].value=0
+            spans[0].innerHTML=0
+        }
+        else
+        {
+            texts[0].value=parseFloat(texts[0].value)-1;
+            spans[0].innerHTML=parseInt(parseFloat(texts[0].value)*26.80)
+        }
+        spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+        spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+    }
+     button1[1].onclick=function()
+     {
+         if(parseFloat(texts[1].value)<=0)
+         {
+             texts[1].value=0
+             spans[1].innerHTML=0
+         }
+         else
+         {
+             texts[1].value=parseFloat(texts[1].value)-1;
+             spans[1].innerHTML=parseInt(parseFloat(texts[1].value)*39.80)
+         }
+         spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+         spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+     }
+     button1[2].onclick=function()
+     {
+         if(parseFloat(texts[2].value)<=0)
+         {
+             texts[2].value=0
+             spans[3].innerHTML=0
+         }
+         else
+         {
+             texts[2].value=parseFloat(texts[2].value)-1;
+             if(parseFloat(texts[2].value)>2)
+             {
+                 spans[2].innerHTML=10.00;
+                 spans[6].innerHTML=spans[2].innerHTML
+                 spans[3].innerHTML=parseInt(parseFloat(texts[2].value)*99.80)-10;
+             }
+             else
+             {
+                 spans[2].innerHTML=0.00;
+                 spans[6].innerHTML=spans[2].innerHTML
+                 spans[3].innerHTML=parseInt(parseFloat(texts[2].value)*99.80)
+             }
+         }
+         spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+         spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+     }
+    button2[0].onclick=function()
+    {
+        texts[0].value=parseFloat(texts[0].value)+1;
+        spans[0].innerHTML=parseInt(parseFloat(texts[0].value)*26.80)
+        spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+        spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+    }
+     button2[1].onclick=function()
+     {
+         texts[1].value=parseFloat(texts[1].value)+1;
+         spans[1].innerHTML=parseInt(parseFloat(texts[1].value)*39.80)
+         spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+         spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+     }
+     button2[2].onclick=function()
+     {
+         texts[2].value=parseFloat(texts[2].value)+1;
+         if(parseFloat(texts[2].value)>2)
+         {
+             spans[2].innerHTML=10.00;
+             spans[6].innerHTML=spans[2].innerHTML
+             spans[3].innerHTML=parseInt(parseFloat(texts[2].value)*99.80)-10;
+         }
+         else
+         {
+             spans[2].innerHTML=0.00;
+             spans[6].innerHTML=spans[2].innerHTML
+             spans[3].innerHTML=parseInt(parseFloat(texts[2].value)*99.80)
+         }
+         spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+         spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+     }
+    a1.onclick=function()
+    {
+         alert("您本次购买的商品总价为："+spans[5].innerHTML+"元，请选择支付方式")
+    }
+    as[0].onclick=function()
+    {
+        texts[0].value=0;
+        spans[0].innerHTML=0
+        spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+        spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+    }
+     as[3].onclick=function()
+     {
+         texts[1].value=0;
+         spans[1].innerHTML=0
+         spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+         spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+     }
+     as[6].onclick=function()
+     {
+         texts[2].value=0;
+         spans[3].innerHTML=0
+         spans[4].innerHTML=parseFloat(texts[0].value)+parseFloat(texts[1].value)+parseFloat(texts[2].value)
+         spans[5].innerHTML=Number(spans[0].innerHTML)+Number(spans[1].innerHTML)+Number(spans[3].innerHTML)
+     }
+    as[9].onclick=function()
+    {
+        for(i=0;i<3;i++)
+        {
+           texts[i].value=0;
+        }
+        for(j=0;j<7;j++)
+        {
+            spans[j].innerHTML=0;
+        }
+    }
+    for(i=1;i<=10;i=i+3)
+    {
+        as[i].onclick=function()
+        {
+            alert("欢迎来到购物车！")
+        }
+    }
+
+</script>
+
+</body>
+</html>

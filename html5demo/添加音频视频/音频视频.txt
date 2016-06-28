@@ -1,0 +1,65 @@
+音频  
+视频
+  html  div css  插件
+  
+ html5 中 音频 视频  内置了标签 
+ <video> 视频
+ <audio> 音频
+ 音频、视频+js代码操作
+ 1 js检测浏览器支持 音频格式：
+ canPlayType();
+ 	probably 支持
+    “”  不支持
+    .3gpg
+ <audio src="1.mp3" controls="controls">
+ 
+	controls="controls" 播放控件
+    autoplay=”autoplay“ 自动播放
+    loop="loop" 循环播放
+    
+ preload  如果出现该属性，则音频在页面加载时进行加载，并预备播放。  类似 window.onload
+				 如果使用 "autoplay"，则忽略该属性。
+ 
+	<video> 视频  测试通过 mp4   待测 ：rm rmvb
+	controls="controls" 播放控件
+    autoplay=”autoplay“ 自动播放
+    loop="loop" 循环播放
+    width="" 宽度
+    height="" 高度
+    
+  js 操作属性：
+  	获取元素对象：
+    	getElementById();
+        元素对象.属性名称 = value;
+        
+        duration: 返回视频或音频播放长度   秒   总播放时间
+        currentTime: 设置或返回音视频的当前位置，秒
+        error 错误MediaError对象 code 错误码
+        	音视频对象.erro.code //错误码
+            1 下载过程中用户终止 media_err_aborted
+            2  下载错误	  media_err_network
+            3  解码错误	   media_err_decode
+            4 不支持	      media_err_src_not_supported
+            
+        muted 静音 true   false  
+        pause()  暂停
+    	 play()  播放
+   		 
+    
+    	load(); 重新加载 音视频
+        	<a href="" onclick="">
+            视频对象
+            视频对象.load();
+    
+     playbackspeed = "value" 快进 快退
+    	 1.0 正常
+         2.0 倍速
+         0.5 半速
+         -1.0 正常速度的退后
+         -0.5 向后 半速
+    
+    
+    
+    
+    
+    

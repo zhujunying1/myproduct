@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding: 0}
+		article{
+			width:300px;
+			margin:50px auto;
+			border:2px solid blue;
+			border-radius: 5px;
+			text-align: center;
+		}
+		hgroup h1{
+			font-size: 25px;
+			color:gray;
+			line-height: 40px
+		}
+		hgroup h2{
+			font-size: 16px;
+			line-height: 30px;
+			margin-bottom: 20px
+		}
+		form p{
+			line-height: 50px;
+		}
+		form p input{
+			width: 250px;
+			height: 30px;
+			padding-left: 20px;
+		}
+		#lbtn,#rbtn{
+			width: 100px;
+			height: 40px;
+			font-size: 16px;
+			text-align: center;
+			padding-left: 0;
+			color:#fff;
+			line-height: 40px;
+			border-radius: 5px;
+			background: green;
+			border:0;
+			margin-left: 10px
+		}
+		#rbtn{
+			background: red
+		}
+		#foot{
+			line-height: 30px
+		}
+		#mm{
+			font-size: 16px;
+			color:orange;
+			text-align: center;
+		}
+	</style>
+	<script>  
+        function check() {  
+            var psd1=document.getElementById("psd1");  
+            var psd2=document.getElementById("psd2");
+            var mm=document.getElementById("mm");  
+            if(psd1.value!=psd2.value){
+            	 mm.innerHTML="密码不一致，请重新输入";
+            	 psd2.value="";
+            }else{
+            	mm.innerHTML="";
+            } 
+               
+     	}    
+	</script>
+</head>
+<body>
+	<article>
+		<hgroup>
+			<h1>用户注册</h1>
+			<h2>对新增元素，新增属性的测试案例</h2>
+		</hgroup>
+		<form action="data_do.html">
+			<p><input type="text" placeholder="请输入用户名"required autofocus></p>
+			<p><input type="password" placeholder="请输入您的密码"required id="psd1"></p>
+			<p><input type="password" placeholder="请输入您的确认密码" id="psd2" required onblur="check()"></p>
+			<p id="mm"></p>
+			<p><input type="email" placeholder="请输入您的邮箱地址"required></p>
+			<p><input type="date" placeholder="年/月/日"required></p>
+			<p><input type="submit" value="验证提交" id="lbtn"><input type="submit" value="无验证提交" id="rbtn" formnovalidate></p>
+		</form>
+		<p id="foot">应有账号<a href="#">登录</a></p>
+	</article>
+</body>
+</html>

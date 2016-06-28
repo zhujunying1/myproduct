@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>银行服务</title>
+	<!--IE浏览器以最新的内核来渲染页面-->
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <!--视口的宽度与设备的宽度一致，不允许缩放页面-->
+	    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#wrap{
+			width: 100%;
+			background: #ddd;
+			font-size: 14px;
+			padding-left: 5px;
+		}
+		#wrap>dl{
+			padding-left: 15px;
+		}
+		#wrap>dl>dt{
+			height: 20px;
+			border-bottom: 1px solid #ccc;
+			line-height: 20px;
+			padding-left: 15px;
+		}
+		#wrap>dl>dd input{
+			display: none;
+		}
+		#wrap>dl>dd>div{
+			display: none;
+		}
+		#wrap>dl>dd input:checked+div{
+			display: block;
+		}
+		
+	</style>
+</head>
+<body>
+	<section id="wrap">
+		<dl>
+			<dt><label for="input1">银行卡账号</label></dt>
+			<dd>
+				<input type="radio" name="name" id="input1">
+				<div>
+					<p>文字是记录信息的图像符号。</p>
+					<p>错误观点：文字是记录语言的符号。</p>
+					<p>错误原因：西方中心论。</p>
+				</div>				
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="input2">开通服务</label></dt>
+			<dd>
+				<input type="radio" name="name" id="input2">
+				<div>
+					<p>说文字是记录语言的符号</p>
+					<p>就是现在还有很多民族</p>
+					<p>但是这不能证明中国文字语言的记录</p>
+					<p>也就是说不能证明中国文字产生在语言</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="input3">银行支付宝</label></dt>
+			<dd>
+				<input type="radio" name="name" id="input3">
+				<div>
+					<p>人类最早在地上或岩石上画画时，可能五个元音还发不全，只能嗷嗷、啊啊、喔喔叫唤。当能够有意识地发出辅音+元音的单音（如吗、八、哈）时，人类可能早已结绳记事了。</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="input4">银行业务区域</label></dt>
+			<dd>
+				<input type="radio" name="name" id="input4">
+				<div>
+					<p>现在中国有几十种语言，但是都能对应同一种文字，这是西方观点是怎么也解释不了的。</p>
+			</dd>
+		</dl>
+	</section>							
+</body>
+</html>

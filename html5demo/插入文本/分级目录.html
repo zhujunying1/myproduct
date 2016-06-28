@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分级目录</title>
+	<style>
+		对于分级显示的目录，需用counters,而不是counter来实现技术器技术
+		li:before{
+			content:counters(myCounter,".");
+			counter-increment: myCounter;
+			margin-right: 5px;
+			color:red;
+			font-weight: bolder;
+		}
+		ul{
+			list-style: none;
+			line-height: 25px;
+			/* counter-reset 属性设置某个选择器出现次数的计数器的值 */
+			counter-reset: myCounter;
+			content:counters(count,".");
+			counter-increment: count;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>简介</li>
+		<li>相关辖区
+			<ul>
+				<li>北京市
+					<ul>
+						<li>海淀区</li>
+						<li>朝阳区</li>
+						<li>丰台区</li>
+						<li>东城区</li>
+						<li>西城区</li>
+					</ul>
+				</li>
+				<li>河南省
+					<ul>
+						<li>商丘市</li>
+						<li>南阳市</li>
+						<li>焦作市</li>
+						<li>驻马店市</li>
+						<li>邓州市</li>
+						<li>永城市</li>
+						<li>鹤壁市</li>
+						<li>许昌市</li>
+						<li>安阳市</li>
+						<li>洛阳市</li>
+					</ul>
+				</li>
+				<li>广东省
+					<ul>
+						<li>深圳市</li>
+						<li>广州市</li>
+						<li>东莞市</li>
+						<li>虎门市</li>
+						<li>汕头市</li>
+						<li>荥阳市</li>
+					</ul>
+				</li>
+				<li>天津市</li>
+			</ul>
+		</li>
+		<li>拓展业务范围
+			<ul>
+				<li>业务一</li>
+				<li>业务二</li>
+				<li>业务三</li>
+			</ul>
+		</li>
+		<li>部门机构
+			<ul>
+				<li>人事部</li>
+				<li>财务部</li>
+				<li>文化部</li>
+				<li>宣传部</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

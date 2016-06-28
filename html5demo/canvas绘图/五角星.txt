@@ -1,0 +1,35 @@
+ <script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById("canvas");star
+			canvas.width = 600;
+			canvas.height = 600;
+			var star = canvas.getContext("2d"); 
+			//调用绘制五角的函数并传入相应的参数	
+			drawStar(star , 140 , 300 , 300 , 310 , 0);
+
+		}
+		//封装绘制五角星的函数
+		function drawStar(cxt , r , R , x , y , rot){
+			/*
+				cxt: 绘制的上下文环境
+			 	r: 内圆的半径
+			 	R: 外圆的半径
+			 	x: 五角星的中心点距离X轴的坐标位置
+			 	y: 五角星的中心点距离Y轴的坐标位置
+			 	rot: 五角星的旋转角度 
+			*/
+			cxt.beginPath();
+			for(var i = 0; i < 5; i++){
+				cxt.lineTo(Math.cos((18 + i * 72 - rot) /180 * Math.PI) * R + x ,
+					-Math.sin((18 + i * 72 -rot) /180 * Math.PI) * R + y);
+
+				cxt.lineTo(Math.cos((54 + i * 72 -rot) /180 * Math.PI) * r + x ,
+					-Math.sin((54 + i * 72 -rot) /180 * Math.PI) * r + y);
+			}
+			cxt.closePath();
+			cxt.lineWidth = 10;
+			cxt.strokeStyle = "red";
+			cxt.stroke();
+		}
+
+</script>

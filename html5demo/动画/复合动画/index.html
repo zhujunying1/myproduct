@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		
+		.p{
+			width: 200px;
+			height: 200px;
+			margin:100px auto;
+			background: #ff00ff;
+			/*先移动—旋转—缩放*/
+			/* -webkit-transform:translate(100px,100px) rotate(45deg) scale(0.5,0.5)  ;*/
+			/*先旋转—缩放—移动*/
+			-webkit-transform:scale(0.5,0.5) rotate(45deg)  translate(100px,100px)  ;
+		}
+	</style>
+</head>
+<body>
+	<p class="p"></p>
+</body>
+</html>

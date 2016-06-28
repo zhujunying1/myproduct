@@ -1,0 +1,154 @@
+body,
+html {
+  width: 100%;
+  height: auto;
+}
+section {
+  width: 100%;
+  height: auto;
+  /*头部部分*/
+  /*第二部分*/
+  /*第三部分*/
+}
+section header {
+  width: 100%;
+  height: 84px;
+  padding-right: 20px;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-sizing: border-box;
+}
+section header ul {
+  display: -webkit-box;
+  -webkit-box-align: center;
+}
+section header ul li {
+  margin-left: 10px;
+}
+section header div:last-child {
+  width: 84px;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+  text-align: center;
+  font-size: 12px;
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+section #nav {
+  width: 100%;
+  height: 43px;
+  font-size: 25px;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  -webkit-box-sizing: border-box;
+  padding: 0 10px;
+  background: #E63B53;
+}
+section article {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  /*今日更新jieshu */
+}
+section article p {
+  width: 100%;
+  height: auto;
+}
+section article p img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+section article #div {
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+}
+section article #div .aside {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+}
+section article #div .aside dl {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+section article #div2 {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+section article #div2 .aside2 {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+}
+section article #div2 .aside2 div {
+  width: 100%;
+  height: auto;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  -webkit-box-sizing: border-box;
+  text-indent: 2em;
+}
+section article #div2 .aside2 div aside {
+  width: 100%;
+  position: relative;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-orient: vertical;
+  -webkit-box-sizing: border-box;
+}
+section article #div2 .aside2 div aside h1,
+section article #div2 .aside2 div aside p {
+  line-height: 25px;
+  height: 25px;
+}
+section article #div2 .aside2 div aside img {
+  position: absolute;
+  right: 10px;
+  top: 47%;
+}
+section article #div2 .aside3 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+section article #div2 .aside3 div {
+  width: 100%;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+}
+section article #div2 .aside3 div dl {
+  width: 100%;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+section article #div2 .aside3 div dl dt {
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+section article #div2 .aside3 div dl dd {
+  -webkit-box-flex: 1;
+}
+section article #div2 .aside3 div dl dd h1,
+section article #div2 .aside3 div dl dd p {
+  line-height: 25px;
+  height: 25px;
+}

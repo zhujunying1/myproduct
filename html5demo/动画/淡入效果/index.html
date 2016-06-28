@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淡入淡出效果</title>
+	<style>
+		@-webkit-keyframes fineIn{
+			0%{
+				
+				opacity: 0;
+				-webkit-transform:rotate(45deg);
+			}
+			50%{
+				background: #00ff00;
+				color: blue;
+				-webkit-transform:rotate(0deg);
+				opacity: 0.7;
+			}
+			100%{
+				background: red;
+				color: yellow;
+				opacity: 1;
+			}
+		}
+
+
+		p{
+			width: 200px;
+			height: 200px;
+			margin:100px auto;
+			background:#ff00ff;
+			color: red;
+			line-height: 200px;
+			text-align: center;
+			-webkit-animation:fineIn 5s ease infinite alternate;
+		}
+	</style>
+</head>
+<body>
+	<p>淡入淡出效果</p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		#myCanvas{
+			border:1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="1100" height="700">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var rect=document.getElementById("myCanvas");
+		//创建绘制2d对象
+		var obj=rect.getContext("2d");
+		var money=[0,50,100,150,200,250,300];
+		var month=["10月","11月","12月","1月","2月","3月"];
+		var color=["green","blue","yellow","orange","purple","yellowgreen"];
+	   	var red=[100,250,150,170,130,156];
+       		 var blue=[40,134,67,150,70,90];
+
+
+		//划横线
+		for(var i=0;i<money.length;i++){
+			var Y=100+i*50;
+			obj.moveTo(100,Y);
+			obj.lineTo(120,Y);
+			obj.fillText(money[money.length-1-i],80,Y,15);
+			obj.stroke();
+		}
+		//画底线
+			obj.moveTo(100,400);
+			obj.lineTo(720,400);
+			obj.stroke();
+
+		//画竖线
+			obj.moveTo(100,100);
+			obj.lineTo(100,400);
+			obj.stroke();
+
+		//绘制红色柱形图
+		for(var i=0;i<red.length;i++){
+			obj.beginPath();
+			obj.strokeStyle="red";
+			obj.lineWidth="40";
+			obj.moveTo(100*(i+2),400);
+			obj.lineTo(100*(i+2),400-red[i]);
+			obj.fillText(month[i],100*(i+2)-13,420,30);
+			obj.fillText(blue[i]+"/"+red[i],100*(i+2)-13,400-red[i]-10,30);
+			obj.stroke();
+			
+		}
+		//绘制红蓝色
+		for(var i=0;i<red.length;i++){
+			obj.beginPath();
+			obj.strokeStyle=color[i];
+			obj.lineWidth="40";
+			obj.moveTo(100*(i+2),400);
+			obj.lineTo(100*(i+2),400-blue[i]);
+			obj.stroke();
+			
+		}
+
+
+		
+
+	</script>
+</body>
+</html>

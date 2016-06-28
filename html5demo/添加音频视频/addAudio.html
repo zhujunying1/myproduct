@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加音频文件</title>
+</head>
+<body>
+	<!-- 第一种方法 -->
+
+	<!-- autoplay设置在加载完成后是否自动播放
+	controls设置是否显示播放控件
+	loop设置是否循环播放 -->
+	<audio src="白狐.mp3" autoplay="autoplay" controls="controls" loop="loop">抱歉，您的浏览器不支持音频的播放</audio><br/>
+
+	<!-- 第二种方法 -->
+	<audio autoplay="autoplay" controls="controls" loop="loop">
+		<source src="白狐.mp3" type="audio/mp3"></source>
+		抱歉，您的浏览器不支持音频的播放
+	</audio>
+</body>
+</html>

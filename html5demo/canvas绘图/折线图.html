@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		#myCanvas{
+			border:1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="1000" height="700">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var rect=document.getElementById("myCanvas");
+		//创建绘制2d对象
+		var obj=rect.getContext("2d");
+		var money=[0,50,100,150,200,250,300];
+		var month=["10月","11月","12月","1月","2月","3月"];
+		var red=[50,70,50,80,160,60];
+	   	var blue=[300,90,67,150,85,130];
+
+		//划竖线
+		for(var i=0;i<month.length;i++){
+			obj.beginPath();
+			obj.lineWidth="2";
+			obj.moveTo(100*(i+1),100);
+			obj.lineTo(100*(i+1),400);
+			obj.fillText(month[i],100*(i+1)-10,420,30);
+			obj.stroke();
+		}
+		//划横线
+		for(var i=0;i<money.length;i++){
+			obj.beginPath();
+			obj.lineWidth="2";
+			obj.fillText(money[money.length-i-1],60,100+50*i,30);
+			obj.moveTo(100,100+50*i);
+			obj.lineTo(600,100+50*i);
+			obj.stroke();
+		}
+
+		//绘制蓝色的曲线
+		for(var i=0;i<blue.length;i++){
+			obj.beginPath();
+			obj.strokeStyle="blue";
+			obj.moveTo(100*(i+1),400-blue[i]);
+			obj.lineTo(100*(i+2),400-blue[i+1]);
+			obj.stroke();
+		}
+		//图文上方文字
+		obj.beginPath();
+	   	obj.strokeText("万元/平方米",100,90,300);
+	   	obj.strokeStyle="#000";
+		obj.font="30px 微软雅黑 bolder";
+		obj.stroke();
+
+		//绘制红色的曲线
+		for(var i=0;i<red.length;i++){
+			obj.beginPath();
+			obj.strokeStyle="red";
+			obj.moveTo(100*(i+1),400-red[i]);
+			obj.lineTo(100*(i+2),400-red[i+1]);
+			obj.stroke();
+		}
+
+			//绘制蓝色边框白色背景的实心圆
+				for(var i=0;i<blue.length;i++){
+				obj.beginPath();
+				obj.arc(100*(i+1),400-blue[i],8,0,2*Math.PI,false);
+				obj.closePath();
+				obj.fillStyle="#fff";
+				obj.strokeStyle="blue";
+				obj.fill();
+				obj.stroke();
+			}
+
+			//绘制红色边框白色背景的实心圆
+				for(var i=0;i<red.length;i++){
+				obj.beginPath();
+				obj.arc(100*(i+1),400-red[i],8,0,2*Math.PI,false);
+				obj.closePath();
+				obj.fillStyle="#fff";
+				obj.strokeStyle="red";
+				obj.fill();
+				obj.stroke();
+			}
+
+
+
+	</script>
+</body>
+</html>

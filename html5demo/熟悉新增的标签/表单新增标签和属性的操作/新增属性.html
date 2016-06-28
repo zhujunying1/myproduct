@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单的新增属性</title>
+	<style>
+		p label{
+			width: 200px;
+			height: 20px;
+			display: inline-block;
+			margin-right: 10px;
+			text-align: right;
+		}
+	</style>
+	<script>
+		//显示验证
+		function check(){
+			var email=document.getElementById("email");
+			if(email.value==""){
+				alert("请输入您的email地址");
+				return false;
+			}else if(!email.checkValidity())
+				alert("请输入正确的邮箱格式！");
+			else
+				alert("恭喜您，输入格式正确！");
+		}
+	</script>
+</head>
+<body>
+		<!-- novalidate是用来设置表单的免验证操作 -->
+		<form action="data.html" id="testForm" method="post" onsubmit="check()">
+			<p><label for="search">查询：</label><input type="search" placeholder="请输入您要查找的内容"autofocus></p>
+			<!-- placeholder用来显示提示信息 -->
+			<!-- autofocus用来在页面加载时，自动获取焦点 -->
+			<p><label for="name">姓名：</label><input type="text" placeholder="请输入您的姓名" required></p>
+			<p><label for="age">年龄：</label><input type="number" required min="16" max="100" step="5" id="age"></p>
+			<p><label for="range">年龄范围：</label><input type="range" required min="1" max="100" step="5" id="range" value="25" name="ages"><output onforminput="value=ages.value">25</output></p><!-- output必须写在form中 -->
+			<p><label for="color">请选择您喜欢的颜色：</label><input type="color" id="color"></p>
+			<!-- pattern是用来为手机号执行验证规则 -->
+			<p><label for="tel">手机号码：</label><input type="tel" placeholder="请输入您的13位手机号码" required pattern="1[358][0-9]{9}"></p>
+			<!-- required是要求元素为必填项 -->
+			<!-- autocomplete是完成自动填充功能 -->
+			<p><label for="email">请输入您的邮箱：</label><input type="email" id="email" required list="data_list" autocomplete>
+				<!-- datalist是显示下拉列表,配合list属性使用，list属性值为对应数据列表的id值 -->
+				<datalist id="data_list">
+					<option value="henyulee@163.com"></option>
+					<option value="1549782452@qq.com"></option>
+					<option value="liguang@sina.com"></option>
+					<option value="henyulee@sohho.com"></option>
+					<option value="cehui@edu.com.cn"></option>
+					<option value="hpucehui@163.com"></option>
+				</datalist>
+			</p>
+			<p><label for="regin_date">注册日期：</label><input type="date" placeholder="年/月/日" id="regin_date"/></p>
+			<p><label for="regin_time">注册时间：</label><input type="time" placeholder="年/月/日" id="regin_time"/></p>
+			<p><label for="url">相关链接</label><input type="url" placeholder="请输入您要链接的地址" required/></p>
+			<!-- multiple属性用来控制多个文件的上传 -->
+			<p><label for="file">上传文件：</label><input type="file" placeholder="请输入您要上传的文件" required multiple/></p>
+			<p><label for="self">个人简介：</label>
+			</p>
+			<p><label for="self2"></label>
+			<textarea name="self" id="self2" cols="30" rows="10">
+			</textarea></p>
+			<!-- formaction来重置提交页面 -->
+			<!-- formmethod来重置提交方法 -->
+			<input type="submit" formaction="reset.html" value="重置提交页面" formmethod="get">
+			<input type="submit"  value="提交">
+			<!-- formnovalidate是用来重置表单的免验证操作 -->
+			<input type="submit"  value="免验证提交" formnovalidate>
+		</form>
+		<!-- form属性 ，通过此属性来设置元素所属表单-->
+		<textarea form="testForm" cols="30" rows="5">
+		</textarea>
+</body>
+</html>

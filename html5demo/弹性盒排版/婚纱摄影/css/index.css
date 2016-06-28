@@ -1,0 +1,82 @@
+body,
+html {
+  width: 100%;
+  height: auto;
+}
+address {
+  width: 100%;
+  height: auto;
+  /*头部区域*/
+  /*图片轮播加导航位置*/
+}
+address header {
+  width: 100%;
+  height: 30px;
+  background: #DF3051;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+}
+address header p {
+  font-size: 16px;
+  color: #fff;
+}
+address header p img {
+  display: block;
+}
+address nav {
+  whith: 100%;
+  height: auto;
+  overflow: hidden;
+  background: red;
+}
+address nav div {
+  width: 100%;
+  height: auto;
+  z-index: 8;
+}
+address nav div ul {
+  width: 100%;
+  display: -webkit-box;
+}
+address nav div ul li {
+  width: 100%;
+}
+address nav div ul li img {
+  width: 100%;
+  display: inline-block;
+}
+address nav aside {
+  whith: 100%;
+  height: 26px;
+  line-height: 26px;
+  z-index: 4;
+}
+address nav aside ul {
+  display: -webkit-box;
+  whith: 100%;
+}
+address nav aside ul li {
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+address section {
+  width: 100%;
+  height: auto
+		position: fixed;
+  background: yellow;
+  z-index: 5;
+}
+address section footer {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+}
+address section footer dl {
+  whith: 100%;
+  height: auto;
+  -webkit-box-flex: 1px;
+  text-align: center;
+}

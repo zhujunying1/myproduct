@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在初识文本之前之后添加文本</title>
+	<style>
+		/* 利用before在前部插入文本"AAA" */
+		h1:before{
+			content:"AAA";
+			color:orange;
+		}
+		/* 利用after在前部插入文本"bbb" */
+		p:after{
+			content:"bbb";
+			color:red;
+			font-weight: bolder;
+		}
+		/* 利用after 在p之前插入一张图片 */
+		p:before{
+			content:url(pic.jpg);/*用content插入图片*/
+			margin-right: 20px
+		}
+	</style>
+</head>
+<body>
+	<h1>题目1</h1>
+	<p>内容1</p>
+	<h1>题目2</h1>
+	<p>内容2</p>
+	<h1>题目3</h1>
+	<p>内容3</p>
+	<h1>题目4</h1>
+	<p>内容4</p>
+</body>
+</html>

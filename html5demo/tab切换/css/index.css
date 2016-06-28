@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+}
+section {
+  width: 100%;
+  height: 100%;
+  border: 1px solid blue;
+}
+section ul {
+  width: 100%;
+  height: 40px;
+  background: #f0f;
+  border-bottom: 1px solid blue;
+  position: relative;
+  display: -webkit-box;
+}
+section ul li {
+  -webkit-box-flex: 1;
+  text-align: center;
+  line-height: 40px;
+}
+section ul aside {
+  position: absolute;
+  width: 33.3%;
+  height: 2px;
+  background: blue;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 3s;
+}
+section address {
+  width: 100%;
+  overflow: hidden;
+}
+section address div {
+  display: -webkit-box;
+  -webkit-transition: all 3s;
+}
+section address div nav {
+  width: 100%;
+  height: 200px;
+  background: orange;
+}
+.on {
+  background: orange;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="reset.css">
+	<script src="jquery.js"></script>
+	<style>
+		#myCanvas{
+			border:1px solid blue;
+		}
+		#show{
+			position: absolute;
+			left:320px;
+			top:50px;
+			font-weight: bold;
+		}
+		#show span{
+			display: inline-block;
+			position: relative;
+			top:5px;
+			width: 50px;
+			height:20px;
+			margin-right: 20px;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="400">抱歉，您的浏览器不支持绘图！</canvas>
+	<div id="show"></div>
+	<script type="text/javascript">
+		var o=document.getElementById("myCanvas");
+		var obj=o.getContext("2d");//获取平面对象
+		var data_arr=[0.1,0.15,0.15,0.15,0.1,0.15,0.1,0.1];//设置占据比例
+		var color_arr=["green","blue","yellowgreen","orange","red","purple","lightgray","gray"];
+		var time_arr=["1季度","2季度","3季度","4季度","5季度","6季度","7季度","8季度"];
+		var start=0,end;//定义起始角位置
+		var ln=data_arr.length;
+		for(var i=0;i<ln;i++){
+			end=start+data_arr[i]*2*Math.PI;
+			obj.fillStyle=color_arr[i];
+			obj.beginPath();
+			obj.moveTo(200,200);
+			obj.arc(150,200,150,start,end,false);
+			obj.fill();
+			start=end;
+		}
+		//创建展示条
+		for(var j=0;j<ln;j++){
+			$("#show").append("<p style='color:"+color_arr[j]+"'><span style='background:"+color_arr[j]+"'></span>"+time_arr[j]+"</p>");
+		}
+	</script>
+</body>
+</html>

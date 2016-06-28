@@ -1,0 +1,176 @@
+body,
+html {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+}
+article {
+  width: 100%;
+  height: 100%;
+  /*display:-webkit-box;*/
+  /*overflow:hidden;*/
+  /*医生主页开始*/
+}
+article section {
+  width: 100%;
+  height: auto;
+  /*头部区域*/
+  /*内容区域*/
+  /*底部区域*/
+}
+article section #header {
+  width: 100%;
+  background: #2A2B2D;
+}
+article section #header #pic {
+  width: 100%;
+}
+article section #header #pic img {
+  width: 100%;
+  display: block;
+}
+article section #header nav {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+}
+article section #header nav p {
+  position: absolute;
+  top: 15px;
+}
+article section #header nav p:nth-of-type(1) {
+  left: 10px;
+}
+article section #header nav p:nth-of-type(2) {
+  right: 10px;
+}
+article section #header nav p h1 {
+  line-height: 40px;
+  text-align: center;
+}
+article section address {
+  width: 100%;
+  height: auto;
+  /*我的信息*/
+}
+article section address aside:nth-of-type(1),
+article section address aside:nth-of-type(5) {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  padding: 25px 0;
+}
+article section address aside:nth-of-type(1) p:first-child,
+article section address aside:nth-of-type(5) p:first-child {
+  width: 90px;
+}
+article section address aside:nth-of-type(1) p:last-child,
+article section address aside:nth-of-type(5) p:last-child {
+  text-align: center;
+  -webkit-box-flex: 1;
+}
+article section address aside:nth-of-type(2) {
+  width: 100%;
+}
+article section address aside:nth-of-type(2) img {
+  width: 100%;
+  display: block;
+}
+article section address aside:nth-of-type(3) {
+  display: -webkit-box;
+  width: 100%;
+  margin: 20px 0;
+}
+article section address aside:nth-of-type(3) dl {
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+article section address aside:nth-of-type(4) h1 {
+  width: 100%;
+  background: #eee;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+}
+article section address aside:nth-of-type(4) ul {
+  width: 100%;
+}
+article section address aside:nth-of-type(4) ul li {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  display: -webkit-box;
+}
+article section address aside:nth-of-type(4) ul li a {
+  -webkit-box-flex: 1;
+}
+article section address aside:nth-of-type(4) ul li span {
+  width: 35px;
+  display: block;
+}
+article section address #asi {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  font-size: 15px;
+}
+article section address #asi span {
+  display: block;
+  paddigng-left: 20px;
+}
+article section address #asi img {
+  displae: block;
+}
+article section address .h1 {
+  width: 100%;
+  padding: 20px 0;
+  background: #ccc;
+}
+article section address .uls {
+  width: 100%;
+  margin-bottom: 10px;
+}
+article section address .uls ul {
+  width: 100%;
+}
+article section address .uls ul li {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #ccc;
+  display: -webikit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+}
+article section address .tui {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 20px;
+  color: red;
+  background: #ccc;
+}
+article section #footer {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  position: relative;
+}
+article section #footer input,
+article section #footer a {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+article section #footer input:nth-of-type(2),
+article section #footer a:nth-of-type(2) {
+  left: 50%;
+}
+article section #footer input {
+  z-index: 10;
+  opacity: 0;
+}
+article section #footer input:checked + a {
+  background: #36BC9B;
+}

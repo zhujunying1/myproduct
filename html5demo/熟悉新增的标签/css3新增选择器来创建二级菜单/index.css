@@ -1,0 +1,26 @@
+#data{
+	width:100%-30px;
+	margin:0 auto;
+	padding-left: 30px
+}
+#data>dl>dt{
+	line-height: 40px;
+	border-bottom: 1px solid gray;
+	padding-left: 20px;
+	font-size: 20px;
+	font-weight: bolder;
+}
+#data>dl>dd input{
+	display: none;
+}
+#data>dl>dd input:checked+div{
+	display: block;
+}
+#data>dl>dd div{
+	background: lightgray;
+	padding-left: 40px;
+	display: none;
+}
+#data>dl>dd div>p{
+	line-height: 30px
+}

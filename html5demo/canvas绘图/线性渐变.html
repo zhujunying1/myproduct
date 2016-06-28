@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>现行渐变</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="800" height="600">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var rect=document.getElementById("myCanvas");
+		//创建绘制2d对象
+		var obj=rect.getContext("2d");
+		/*var g1=obj.createLinearGradient(100,100,500,0);
+			//绘制红色渐变
+			g1.addColorStop(0.3,"rgba(255,0,0)");
+			//绘制绿色渐变
+			g1.addColorStop(0.6,"rgba(0,255,0)");
+			//绘制蓝色渐变
+			g1.addColorStop(1,"rgba(0,0,255)");
+			obj.fillStyle=g1;*/
+
+			
+		var g2=obj.createLinearGradient(100,100,0,500);
+			//绘制红色渐变
+			g2.addColorStop(0.3,"red");
+			//绘制绿色渐变
+			g2.addColorStop(0.5,"green");
+			//绘制蓝色渐变
+			g2.addColorStop(0.7,"blue");
+			g2.addColorStop(1,"purple");			
+			obj.beginPath();
+			obj.fillStyle=g2;
+			obj.arc(200,200,200,0,2*Math.PI,true);
+			obj.closePath();
+			obj.fill();
+	</script>
+</body>
+</html>

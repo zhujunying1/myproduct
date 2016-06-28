@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+<div class="main" id="main" style="background:#f00; width:200px; height:300px;">
+    <div class="left" id="left">aaa
+    </div>
+</div>
+<div class="right" id="right">bbb
+</div>
+<script language="javascript">
+    var obj = document.getElementById("right");
+    var obj2 = document.getElementById("left");
+    var obj3 = document.getElementById("main");
+    obj3.insertBefore(obj,obj2);
+    obj3.insertBefore(obj2,obj);
+</script>
+</body>
+</html>

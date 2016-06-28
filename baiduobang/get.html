@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="bag">
+		<div class="page"><img src="img/friend1.jpg"><img src="img/end.jpg"></div>
+		<div class="page"><img src="img/friend2.jpg"><img src="img/end.jpg"></div>
+	</div>
+	<div class="bag">
+		<div class="page"><img src="img/love1.jpg"><img src="img/end.jpg"></div>
+		<div class="page"><img src="img/love2.jpg"><img src="img/end.jpg"></div>
+	</div>
+	<div class="bag">
+		<div class="page"><img src="img/work1.jpg"><img src="img/end.jpg"></div>
+		<div class="page"><img src="img/work2.jpg"><img src="img/end.jpg"></div>		
+	</div>
+</body>
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+	new content({
+		bag : $(".bag"),
+		page : $(".page")
+	})
+</script>
+</html>

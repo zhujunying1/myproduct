@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<canvas id="myCanvas" width="400" height="400">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var obj=document.getElementById("myCanvas");
+		var cxt3=obj.getContext("2d");
+		cxt3.fillStyle="#FF0000";
+		cxt3.beginPath();//开始绘制
+		//参数顺序依次为：圆心坐标，半径，起始角，终止角，逆时针
+		cxt3.arc(100,100,100,0,Math.PI*0.5,true);
+		cxt3.closePath();//结束绘制
+		cxt3.fill();//执行填充
+	</script>
+</body>
+</html>

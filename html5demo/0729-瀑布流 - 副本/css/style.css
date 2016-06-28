@@ -1,0 +1,18 @@
+*{margin:0;
+  padding:0;
+  list-style:none;}
+
+#wrapper{position:relative;height:500px;background:#fcc;}
+
+.box{padding:0 0 10px 10px;
+     float:left;}
+
+.pics{padding:10px;
+      border:1px solid #eee;
+      border-radius:4px;
+      box-shadow:0 1px 3px #666;
+      background:#FFF;}
+
+.pics img{display:block;
+          width:162px;
+          height:auto;}

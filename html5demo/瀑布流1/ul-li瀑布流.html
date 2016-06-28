@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style>
+        *{ margin: 0; padding: 0}
+        ul{ position: relative}
+        ul li{ list-style: none; padding:10px; margin-right: 10px; margin-bottom: 10px; border: 1px solid #cccccc; border-radius: 5px; box-shadow: 0 0 5px #ccc; float: left; font-size: 0}
+        ul li img{ width: 200px}
+    </style>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function(){
+            for(var i=0;i<40;i++){
+                $("<li><img src=''></li>").appendTo("ul");
+                $("li").each(function(index){
+                    $(this).children().attr("src","images/tu"+(index+1)+".jpg")
+                })
+            }
+            $(window).on("load",function(){
+                waterfall();
+                var data_tu={data:[{"src":"tu1.jpg"},{"src":"tu2.jpg"},{"src":"tu3.jpg"}]};
+                $(window).on("scroll",function(){
+                    var _ctop=$(window).scrollTop()+$(window).height(),
+                        t_top=$("li").last().position().top;
+                    if(t_top<_ctop){
+                        $.each(data_tu.data,function(){
+                            var _li=$("<li></li>").appendTo("ul");
+                            $("<img>").attr("src","images/"+$(this).attr('src')).appendTo(_li);
+                        })
+                    }
+                    waterfall();
+                })
+                function waterfall(){
+                    var _width=$("li").outerWidth(true),
+                            cols=Math.floor($(window).width()/_width);
+                    $("ul").css({
+                        "width":_width*cols,
+                        "margin":"0 auto"
+                    })
+                    var arrH=[];
+                    $("li").each(function(index){
+                        var H=$(this).outerHeight(true);
+                        if(index<cols){
+                            arrH[index]=H
+                        }else{
+                            var minH=Math.min.apply(null,arrH),
+                                    minHindex=$.inArray(minH,arrH);
+                            $(this).css({
+                                "position":"absolute",
+                                "left":_width*minHindex+"px",
+                                "top":minH+"px"
+                            });
+                            arrH[minHindex]=arrH[minHindex]+$(this).outerHeight(true);
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<ul></ul>
+</body>
+</html>

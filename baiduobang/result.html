@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="result">
+		<div class="success">
+			<section>
+				<div class="title"><img src="img/result.png"></div>
+				<div class="title"><img src="img/result1.png"></div>
+				<div class="article">您成功打败了<span></span>的人，<br>在与别人的近距离交往中，您聪明体贴又自信满满，真是一位不折不扣的微距社交达人，快向小伙伴们炫耀一下吧！</div>
+				<div class="message"><img src="img/result2.png"></div>
+			</section>
+			<a href="#" class="back">再测一次</a>
+			<a href="#" class="confident">炫耀结果</a>
+		</div>
+		<div class="fail">
+			<section>
+				<div class="title"><img src="img/result.png"></div>
+				<div class="title"><img src="img/result1.png"></div>
+				<div class="article">您只打败了<span></span>的人，在与别人的近距离交往中，您的社交技巧仍有较大的提升空间。对影响社交生活的因素（如皮肤感染等细节问题）的了解还略有不足。不用着急，百多邦为您准备了帮助提升社交技巧和自信的“社交锦囊”，快点击获取“社交锦囊”吧！
+				</div>
+				<div class="message"><img src="img/result2.png"></div>
+			</section>
+			<a href="#" class="back">再测一次</a>
+			<a href="#" class="get">获取社交锦囊</a>
+		</div>
+	</div>
+	
+	</div>
+</body>
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+	new content({
+		article : $(".article span"),
+		back : $(".back"),
+		confident : $(".confident"),
+		success : $(".success"),
+		get : $(".get"),
+		fail : $(".fail")
+	})
+</script>
+</html>

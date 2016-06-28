@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/zepto.min.js"></script>
+	
+</head>
+<body>
+	<section>
+		<!--头部区域-->
+		<header>
+			<div class="div"><img src="img/head.jpg"></div>
+			<nav>
+				<div><img src="img/left.jpg"></div>
+				<div>下载有礼活动</div>
+				<div><img src="img/right.jpg"></div>
+			</nav>
+		</header>
+		<!--中间区域-->
+		<article>
+			<h1 id="h1">您还有<span id="num">4</span>次抽奖机会</h1>
+			<div>
+				<img src="img/zp.png">
+				<img src="img/icon-cj.png" id="btn">
+			</div>
+		</article>
+		<!--底部区域-->
+		<footer>
+			<aside>
+				<h1 class="h1">中奖名单</h1>
+				<marquee direction="ltr">
+					<a href="#">133****5711  获得手机一部</a><a href="#">133****5712  获得mini一部</a><a href="#">133****5713  获得手机一部</a><a href="#">133****5714  获得mini一部</a><a href="#">133****5715  获得手机一部</a><a href="#">133****5710  获得mini一部</a>
+				</marquee>
+			</aside>
+			<aside>
+				<h1 class="h1">转盘规则：</h1>
+				<ul class="ula">
+					<li><a href="#">1.每人每天获得三次抽奖机会</a></li>
+					<li><a href="#">2.免费机会用完之后，可以用20积分获取一次抽奖机会</a></li>
+					<li><a href="#">3.登录之后才可以参加此活动！</a></li>
+				</ul>
+				<p><a href="#">查看更多活动说明>></a></p>
+			</aside>
+		</footer>
+
+	</section>
+	<script javascript>
+		$("#btn").on("tap",function(){
+			$(this).animate({
+				rotate:Math.ceil(Math.random()*11)*28+"deg"
+			},2000,"ease-in-out");
+
+			num=parseInt($("#num").text())-1;
+			
+			if(num==0){
+				$("#h1").text("对不起，您的抽奖机会已经用完！")
+			}
+
+			$("#num").text(num);
+		})
+
+	</script>
+</body>
+</html>

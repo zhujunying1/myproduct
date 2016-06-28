@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>情景页</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="slider-wrap">
+		<div><header><h2><img src="img/3_7.gif"></h2><img src="img/3_8.gif" class="qingjing"><a href="friend.html" data-card=0 class="btn">就选这个</a></header></div>
+		<div><header><h2><img src="img/3_1.gif"></h2><img src="img/3_2.png" class="qingjing"><a href="love.html" data-card=1 class="btn">就选这个</a></header></div>
+		<div><header><h2><img src="img/3_5.gif"></h2><img src="img/3_6.gif" class="qingjing"><a href="work.html" data-card=2 class="btn">就选这个</a></header></div>
+	</div>
+	<div class="next">
+		<img src="img/3_4.gif">
+	</div>
+	<div class="prev">
+		<img src="img/3_3.png">
+	</div>
+</body>
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/slider.js"></script>
+<script type="text/javascript">
+	new Slider({
+		wrap : $(".slider-wrap"),
+		next : $(".next"),
+		prev : $(".prev")
+		
+	})
+	new content({
+		btn : $(".btn")
+	})
+</script>
+</html>

@@ -1,0 +1,228 @@
+body,html{
+	width:100%;
+	height:100%;
+}
+	article{
+		width:100%;
+		height:auto;
+	}
+		article header{
+			width: 100%;
+			height:auto;
+			background: #F3246A;			
+		}
+			article header .aside{
+				width: 100%-20px;
+				display: -webkit-box;
+				-webkit-box-pack:justify;
+				padding-right: 20px;
+			}
+				article header .aside p{
+					width: 103px;
+				}
+					article header .aside p img{
+						display: block;
+					}
+					#p{
+						width: 14px; 
+						padding-top: 16px;
+					}
+						#p img{
+							display: block;
+						}
+
+					article header .aside ul {
+						-webkit-box-flex:1;
+						display: -webkit-box;
+						color: #fff;
+					}
+					
+						article header .aside ul li{
+							-webkit-box-flex:1;
+							text-align: center;
+							font-size: 20px;
+							line-height: 46px;
+						}
+							article header .aside ul li:hover{
+								background: red;
+								opacity: 0.8;
+							}
+			#asimg {
+				width: 100%;
+			}
+				#asimg img{
+					width: 100%;
+				}
+		section{
+			width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
+			#aside1{
+				display: -webkit-box;
+				width: 90%;
+				margin:0 auto;
+			}
+				#aside1 p{
+					-webkit-box-flex:1;
+					/* padding-top: 40px; */
+				}
+					#aside1 img{
+						width: 100%;
+					}
+				#aside1 div{
+					-webkit-box-flex:1;
+					display: -webkit-box;
+					-webkit-box-orient:vertical;
+				}
+					#aside1 div dl{
+						width: 100%;
+						display: -webkit-box;
+						text-align: center;
+						
+					}
+						#aside1 div dl dt{
+							width: 50%;
+							/* -wenkit-box-flex:1; */
+
+						}
+						
+							
+							#aside1 div dl dd h1{
+								font-size: 20px;
+								padding-top: 15px;
+								line-height: 25px;
+								text-align: center;
+							}
+
+							#aside1 div dl dd p{
+								font-size: 16px;
+								text-align: center;
+								color: #ccc;
+							}
+	.aside2{
+		width: 100%-60px;
+		height: 48px;
+		display: -webkit-box;
+		-webkit-box-pack:justify;
+		padding:0 30px;
+		
+	}
+		.aside2 #ps span{
+			font-size: 16px;
+			padding-left: 30px;
+		}
+		.aside2 p a{
+			font-size: 22px;
+			color: red;
+		}
+	.aside{
+		width: 100%;
+	}
+		.aside dl{
+			padding:13px 0px;
+			border-bottom: 1px solid #ddd;
+			display: -webkit-box;
+
+		}
+			.aside dl dt{
+				-webkit-box-flex:120;
+				margin-right: 20px;
+			}
+				.aside dl dt img{
+					width: 100%; 
+					
+				}
+			.aside dl dd{
+				-webkit-box-flex:168;
+				padding-right: 20px;
+				display: -webkit-box;
+				-webkit-box-orient:vertical;
+			}
+				.p3{
+					line-height: 40px;
+					font-size: 28px;
+					font-family: 微软雅黑;
+				}
+				.p1{
+					color: #00ff00;
+					-webkit-box-flex:1;
+					display: -webkit-box;
+					-webkit-box-align:center;
+					font-size: 25px;
+				}
+				.p2{
+					height: 30px;
+					line-height: 30px;
+					display: -webkit-box;
+					-webkit-box-pack:justify;
+				}
+					.p2 span,.p2 a{
+						display: block;
+					}
+					.p2 a{
+						text-decoration: line-through;
+					}
+				.foot{
+					width: 90%;
+					margin:0 auto;
+					height: 45px;
+					display: -webkit-box;
+					-webkit-box-pack:justify;
+				}
+					.foot img{
+						width: 41px;
+					}
+					.foot .f{
+						-webkit-box-flex:1;
+						background:#F7F7F7;
+						line-height: 40px;
+						height: 40px;
+						margin:0 10px;
+						text-align: center;
+					}	
+						.foot .f img{
+							width: 10px;
+							padding-top: 15px;
+						}
+	footer{
+		width: 100%-30px;
+		margin:0 auto;
+		height: 120px;
+		display: -webkit-box;
+		-webkit-box-orient:vertical;
+		background: #EEEEEE;
+		padding-top: 20px;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		padding-left: 30px;
+	}
+		#footer .nav{
+			width: 100%-20px;
+			padding-right: 20px;
+			display: -webkit-box;
+			-webkit-box-pack:justify;
+		}
+		#footer .nav {
+			height: 25px;
+			line-height: 25px;
+		}
+			#footer .nav div a,footer .nav div span{
+				padding-right: 20px;
+				font-size: 16px;
+			}
+			#footer .aside{
+				-webkit-box-flex:1;
+				width: 100%;
+				display: -webkit-box;
+				-webkit-box-align:center;
+			}
+
+						#a{
+							width: 100%;
+							height:30px;
+							line-height: 30px;
+							color: #ff00f0;
+							font-size: 16px; 
+							padding-right: 15px;
+						}

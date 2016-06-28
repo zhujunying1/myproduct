@@ -1,0 +1,39 @@
+﻿web 存储： web storage
+   web存储：
+   	本地存储 ：用户的数据 存储在 移动端设备中了， 手机 pad --》   localStorage   没有时间限制的数据存储 
+    session：存储 服务器存储    sessionStorage   针对一个 session 的数据存储 
+ 
+ 
+如何使用：
+	1 检测浏览器的支持性
+    注意： h5中的 web storage  数据都是用javascript 来存 和 取得
+    	
+	
+    2 localStorage 设置和获取 （没有时间限制）
+    
+    	利用存取方法：
+        	存：window.localStorage.setItem("key","val");  ---> localStorage.key="value";
+            取: window.localStorage.getItem("key");		  ---> localStorage.key	
+            
+            
+sessionStorage:
+	对应的一个服务器端的session 会话  当用户关闭 浏览器的时候，会话就删除   
+    
+     存：window.sessionStorage.setItem("key","val");  ---> sessionStorage.key="value";
+     取: window.sessionStorage.getItem("key");		  ---> sessionStorage.key	
+    
+local  session storage 区别：
+ localStorage 存储在客户端 ，没有时间限制的 
+ sessionStorage 服务器端，有生命期  ，页面关闭或调用removeItem("uPwd")消亡sessionStorage  
+    
+  
+
+    
+    
+    
+            	
+       
+   
+   
+   
+   

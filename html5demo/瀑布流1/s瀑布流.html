@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+        *{margin: 0;padding:0}
+        #main{position: relative;}
+        .pic img{width:165px; height: auto;}
+        .box{ padding:15px 0 0 15px;  float: left;}
+        .pic{padding:10px; border:1px solid #ccc;
+            border-radius: 3px; box-shadow:0 0 5px #ccc;
+        }
+    </style>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script >
+        $(function(){
+            $(window).on("load",function(){
+                waterfall()
+                $(window).on("scroll",function(){
+                    var  dataInt={"data":[{"src":"25.jpg"},{"src":"2.jpg"},{"src":"1.jpg"},{"src":"4.jpg"},{"src":"6.jpg"}]}
+                    if(checkedscreenslice){
+                        $.each(dataInt.data,function(key,value){
+                            var oBox=$("<div class='box'></div>").appendTo("#main")
+                            var oPic=$("<div class='pic'></div> ").appendTo(oBox)
+                            $("<img>").attr("src","images/tu"+$(value).attr("src")).appendTo(oPic)
+                        })
+                        waterfall()
+                    }
+                })
+                function waterfall(){
+                    var $box=$("#main>div");
+                    var w=$box.outerWidth();
+                    var cols= Math.floor($(window).width()/w);
+                    $("#main").css({"width":cols*w,"margin":"0 auto"});
+                    var arrH=[];
+                    $box.each(function(index,value){
+                        //  var boxH=$(this).outerHeight()
+                        var boxH=$box.eq(index).outerHeight();
+                        if(index<cols){
+                            arrH[index]=boxH;
+                        }
+                        else{
+                            var minH=Math.min.apply(null,arrH)
+                            var minHIndex= $.inArray(minH,arrH)
+                            $(value).css({
+                                "position":"absolute",
+                                "top":minH+'px',
+                                "left":minHIndex*w+"px"
+                            })
+                            arrH[minHIndex]=arrH[minHIndex]+$(this).outerHeight()
+                        }
+                    })
+                }
+                function   checkedscreenslice(){
+                    var scrollTop=$(window).scrollTop()
+                    var documentH=$(window).height()
+                    var  lastBox=$(".box").last()
+                    var  lastBoxH=lastBox.position().top+Math.floor(lastBox.height()/2)
+                    return (lastBoxH<documentH+scrollTop)?true:false
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="main">
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu1.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu8.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu3.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu4.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu5.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu6.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu7.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu2.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu9.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu10.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu11.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu12.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu13.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu14.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu15.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu16.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu17.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu18.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu19.jpg">
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="images/tu20.jpg">
+        </div>
+    </div>
+</div>
+</body>
+</html>

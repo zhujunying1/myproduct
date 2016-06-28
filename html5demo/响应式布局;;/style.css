@@ -1,0 +1,57 @@
+
+body,html{
+	width: 100%;
+	height: auto;
+	background: #ddd;
+}
+header,footer{
+	width: 100%;
+	height:auto;
+	background: #ccc;
+	margin: 10px 0;
+}
+	header aside{
+		width: 100%;
+		height: auto;
+		padding: 20px;
+	} 
+footer{
+	padding:20px 0;
+}
+
+
+/* 设备在600px以下时，分三栏显示 */
+	@media screen and (max-width:600px){
+		header aside,footer{
+			background: yellow;
+			margin-top:20px;
+		}
+	}
+/* 设备宽度在600px以上1000px以下时，上边分2栏显示 */
+	@media screen and (min-width:600px) and (max-width:1000px){
+		header{
+			display: -webkit-box;
+			-webkit-box-pack:justify;
+		}
+			header aside{
+				-webkit-box-flex:1;
+				margin-right:20px;
+				background: yellowgreen;
+			}
+	}
+
+/* 设备宽度在1000px以上时，分横着三栏显示 */
+@media screen and (min-width:1000px) {
+	section{
+		width:1500px;
+		display: -webkit-box;
+	}
+	header{
+		-webkit-box-flex:2;
+		display: -webkit-box;
+	}
+	footer{
+		-webkit-box-flex:1;
+		text-align: center;
+	}
+}

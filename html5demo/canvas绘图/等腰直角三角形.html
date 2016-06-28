@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<canvas id="myCanvas" width="400" height="400">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var rect=document.getElementById("myCanvas");
+		//创建绘制2d对象
+		var obj=rect.getContext("2d");
+		obj.strokeStyle="blue";
+		//设定起点
+		obj.moveTo(10,10);
+		//设定折点
+		obj.lineTo(10,40);
+		//设定折点
+		obj.lineTo(50,40);
+		//设定折点
+		obj.lineTo(10,10);
+		//完成绘制
+		obj.stroke();
+	</script>
+</body>
+</html>

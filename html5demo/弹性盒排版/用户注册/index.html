@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<link rel="stylesheet" href="reser.css">
+	<link rel="stylesheet" href="index.css">
+	<script type="text/javascript"> 
+		function check(){
+			var pwd=document.getElementById("pwd");
+			var pwd2=document.getElementById("pwd2");
+			var show=document.getElementById("show");
+			if(pwd2.value!=pwd.value){
+				show.innerHTML="对不起，您两次输入的密码不一致！请重新输入";
+				pwd2.value="";
+			}else{
+				show.innerHTML="";
+			}
+		}	
+	</script>
+</head>
+<body>
+	<header>
+		<span></span>
+		<h1>用户注册</h1>
+	</header>
+	<form action="">
+		<p><label for="text">用户名</label><input type="text" class="input" autofocus id="text" required></p>
+
+		<p><label for="pwd">密码</label><input type="password" class="input" id="pwd" required></p>
+
+		<p><label for="pwd2">确认密码</label><input type="password" class="input" id="pwd2" required onblur="check()"></p>
+		<p id="show"></p>
+
+		<p><label for="email">邮箱</label><input type="email" class="input" id="email" required></p>
+
+		<p><input type="checkbox" id="checkbox">我已同意并且阅读<a href="#">用户协议</a></p>
+
+		<p><input type="submit" id="btn" value="注册"></p>
+	</form>
+
+</body>
+</html>

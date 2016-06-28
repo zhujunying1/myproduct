@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		#wrap{width: 1100px;margin:0 auto;}
+		#head_nav aside{width: 157px;line-height: 60px;font-size: 16px;text-align: center;float: left;}
+		#head_nav aside a{text-decoration: none;color:yellowgreen;}
+		#head_nav aside a:hover{border-bottom: 2px solid red;}
+		#content{height: 300px}
+		#content aside{float: left;}
+		#left{width: 180px;height: 300px}
+		#left article{height: 30px;line-height: 30px;background: gray;text-align: center;}
+		#left ul{height: 270px;background: #ccc;}
+		#left ul li{list-style: none;line-height: 30px;  padding-left: 30px;}
+		#center{width: 680px;height: 260px; padding:20px;}
+		#center article{line-height: 40px;font-size: 25px;}
+		#right{float: right;width:160px;background: #ccc;height: 220px;padding:40px 20px;}
+		#right aside{float: none;}
+		#right aside{height: 45px;line-height: 45px;background: gray;text-align: center;margin:20px 0;}
+		#book{width: 120px; height: 70px;border-radius: 10px;text-align: center;line-height: 70px;}
+		#footer{height: 60px;background: gray;clear: both;padding: 20px;line-height: 25px}
+		#footer address{font-style: normal;text-indent: 2em;}
+	</style>
+</head>
+<body>
+	<section id="wrap">
+		<header>
+			<img src="img/banner.png" alt="banner">
+			<nav id="head_nav">
+				<aside><a href="#">HTML/CSS</a></aside>
+				<aside><a href="#">JavaScript</a></aside>
+				<aside><a href="#">Server Side</a></aside>
+				<aside><a href="#">asp.net</a></aside>
+				<aside><a href="#">XML</a></aside>
+				<aside><a href="#">WEB Service</a></aside>
+				<aside><a href="#">web building</a></aside>
+			</nav>
+		</header>
+		<section id="content">
+			<aside id="left">
+				<article>课程表</article>
+				<ul>
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>JavaScript</li>
+					<li>PHP</li>
+					<li>JQuery</li>
+					<li>dic+css</li>
+					<li>java</li>
+					<li>.net</li>
+				</ul>
+			</aside>
+			<aside id="center">
+				<article>课程表</article>
+				<section>
+					<article>定义和用法</article>
+					<aside>cmd=》ipconfig=》169.254.9.46</aside>
+				</section>
+			</aside>
+			<aside id="right">
+				<nav>		
+					<input type="text">	
+					<aside>工具箱</aside>
+					<aside id="book" style="background:green;margin-left:20px">参考书</aside>
+					<aside>赞助商</aside>
+				</nav>
+			</aside>
+		</section>
+		<footer id="footer">
+			<address>注意box-flex只是动态分配父元素的剩余空间，而不是整个父元素的空间。如上例，父元素#box的宽度为240px，如果你认为a,b,c的宽度分别为60, 60, 120那么就错了，因为box-flex只是分配父元素的剩余空间而已，所以a,b,c所分到的应该是除内容外所剩余下来的宽度 </address>
+		</footer>
+	</section>
+</body>
+</html>

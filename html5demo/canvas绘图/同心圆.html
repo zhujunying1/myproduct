@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		#myCanvas{
+			border:1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="400" height="400">抱歉，您的浏览器不支持绘图！</canvas>
+	<script type="text/javascript">
+		var o=document.getElementById("myCanvas");
+		var obj=o.getContext("2d");//获取平面对象
+		for(var i=1;i<30;i++){
+			obj.strokeStyle="yellowgreen";
+			obj.beginPath();
+			obj.arc(0,0,20*i,0,0.5*Math.PI,false);
+			obj.stroke();
+		}
+	</script>
+</body>
+</html>

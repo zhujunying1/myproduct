@@ -1,0 +1,136 @@
+body{
+	width:100%;
+	background:lightgray;
+}
+
+header{
+	width: 100%;
+	background: orange;
+	height:45px;
+	position: relative;
+}
+
+	#h_back{
+		position: absolute;
+		left:30px;
+		top:10px;
+		display: block;
+		width:25px;
+		height:25px;
+		background:url(../images/title_back.png);
+	}
+
+	header h1{
+		font-size: 25px;
+		line-height: 45px;
+		text-align: center;
+		color:white;
+	}
+
+article{
+	width: 90%;
+	margin:10px auto;
+}
+
+	#nav_top{
+		display:-webkit-box;
+		width:100%;
+		height:5px;
+	}
+
+		#l_line{
+			-webkit-box-flex: 1;
+			display:block;
+			background: orange;
+		}
+		#pay_l_line{
+			-webkit-box-flex: 3;
+			display:block;
+			background: orange;
+		}
+		#ok_l_line{
+			-webkit-box-flex: 5;
+			display:block;
+			background: orange;
+		}
+		#end_l_line{
+			-webkit-box-flex: 1;
+			display:block;
+			background: orange;
+		}
+
+		#r_line{
+			-webkit-box-flex: 7;
+			display:block;
+			background: #333;
+		}
+		#pay_r_line{
+			-webkit-box-flex: 5;
+			display:block;
+			background: #333;
+		}
+		#ok_r_line{
+			-webkit-box-flex: 3;
+			display:block;
+			background: #333;
+		}
+
+	#nav ul{
+		display: -webkit-box;
+		height:70px;
+	}
+		#nav ul li{
+			-webkit-box-flex: 1;
+			text-align: center;
+		}
+
+#data{
+	width: 100%;
+	background: white;
+	border:1px solid gray;
+	border-radius: 5px;
+	margin: 20px 0;
+}
+#data li{
+	list-style-image: url(../images/iconN.png);
+	list-style-position: inside;
+	padding-left: 20px;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid gray
+}
+#data li#li1{
+	list-style-image: url(../images/iconO.png);
+}
+#data li label{
+	width: 200px;
+	display: inline-block;
+	margin-right: 20px;
+	text-align: left;
+	font-size: 20px
+}
+#data li input{
+	width: 400px;
+}
+#sub{
+	width: 1230px;
+	height: 50px;
+	background-image: url(../images/next.png);
+	border:0;
+	font-size: 30px;
+	color:white;
+}
+
+footer{
+	display: -webkit-box;
+	width: 90%;
+	margin:0 auto;
+}
+	footer aside{
+		-webkit-box-flex:1;
+		line-height: 25px;
+		text-align: left;
+	}
+		footer aside dl dd span{
+			color:orange;
+		}

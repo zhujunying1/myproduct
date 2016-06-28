@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<canvas id="myCanvas" width="1000" height="600">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var o=document.getElementById("myCanvas");
+		var obj=o.getContext("2d");
+		//蓝色
+			obj.strokeStyle="#00f";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(200,200,100,0,Math.PI*2,true);
+			obj.stroke();
+
+
+		//黄色
+			obj.strokeStyle="yellow";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(500,200,100,0,Math.PI*2,true);
+			obj.stroke();
+
+		//黑色
+			obj.strokeStyle="#000";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(800,200,100,0,Math.PI*2,true);
+			obj.stroke();
+
+		//绿色
+			obj.strokeStyle="#0f0";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(350,300,100,0,Math.PI*2,true);
+			obj.stroke();
+
+		//红色
+			obj.strokeStyle="#f00";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(650,300,100,0,Math.PI*2,true);
+			obj.stroke();
+
+		//蓝绿相间，去掉绿色
+			obj.strokeStyle="#00f";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(200,200,100,0,Math.PI*0.125,false);
+			obj.stroke();
+
+		//黄绿相间，去掉绿色
+			obj.strokeStyle="yellow";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(500,200,100,0.875*Math.PI,Math.PI,false);
+			obj.stroke();
+
+		//黄红相间，去掉红色
+			obj.strokeStyle="yellow";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(500,200,100,0,0.125*Math.PI,false);
+			obj.stroke();
+
+		//红黑相间，去掉红色
+			obj.strokeStyle="#000";
+			obj.beginPath();
+			obj.lineWidth="5";
+			obj.arc(800,200,100,0.875*Math.PI,Math.PI,false);
+			obj.stroke();
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--IE浏览器以最新的内核来渲染页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--视口的宽度与设备的宽度一致，不允许缩放页面-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>幸运大转盘</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/zepto.min.js"></script>
+</head>
+<body>
+	<article>
+		<!-- 头部区域 -->
+		<header class="head">
+			<aside><img src="img/head.jpg"></aside>
+			<nav>
+				<div><img src="img/left.jpg"></div>
+				<div>下载有礼活动</div>
+				<div><img src="img/right.jpg"></div>
+			</nav>
+		</header>
+		<!-- 主题区域 -->
+		<section>
+			<h1 id="till">您还有<span id="num">5</span>次抽奖机会</h1>
+			<aside>
+				<img src="img/zp.png">
+				<img src="img/icon-cj.png" id="btn">
+			</aside>
+		</section>
+		<!-- 底部区域 -->
+		<footer>
+			<section>
+				<h2>中奖名单</h2>
+				<marquee direction="ltr">
+					135*****727 获得手机一部	
+					135*****727 获得手机一部
+					135*****727 获得手机一部	
+					135*****727 获得手机一部
+					135*****727 获得手机一部
+					135*****727 获得手机一部
+				</marquee>
+			</section>
+			<section>
+				<h2>转盘规则</h2>
+				<ul>
+					<li>1.每人每天获得三次抽奖机会</li>
+					<li>2.免费机会用完之后可以用20积分兑换一次抽奖机会</li>
+					<li>3.登陆才可以死参加活动哦</li>
+				</ul>
+			</section>
+			<section>
+				<a href="">查看更多活动说明>></a>
+			</section>
+		</footer>
+	</article>
+	<!-- 功能代码实现 -->
+	<script javascript>
+		$("#btn").on("tap",function(){
+				$(this).animate({
+					rotate:Math.ceil(Math.random()*11)*30+"deg"
+				},2000,"ease-in-out");
+			
+				carNum = parseInt($("#num").text())-1;
+				if(carNum==0){
+					$("#till").text("您已没有抽奖机会");
+				}
+				$("#num").text(carNum);
+			})
+	</script>
+</body>
+</html>

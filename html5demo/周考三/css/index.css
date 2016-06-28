@@ -1,0 +1,185 @@
+body,html{
+	width: 100%;
+	height: auto;
+}
+
+/* 头部区域 */
+	header{
+		width: 100%;
+		height: 86px;
+		border-bottom:1px solid #ccc;
+		
+	}
+		header nav:first-child{
+			width: 100%;
+			height: 44px;
+			background:#dfdfdf;
+			display: -webkit-box;
+			-webkit-box-align:center;
+			-webkit-box-pack:justify;
+			padding:0 20px;
+			border-bottom:1px solid #ccc;
+			-webkit-box-sizing:border-box;
+		}
+			header nav:first-child p{
+				font-size: 25px;
+
+			}
+			header nav:first-child img{
+				display:block;
+			}
+		header nav:last-child{
+			background:#f4f4f4;
+			display: -webkit-box;
+			width: 100%;
+			height: 41px;
+			-webkit-box-align:center;
+			-webkit-box-pack:justify;
+			padding:0 10px;
+			-webkit-box-sizing:border-box;
+		}
+			
+			header nav:last-child p:last-child{
+				border: 1px solid red;
+				background: red; 
+				color: #fff;
+				width: 50px;
+				height: 23px;
+				text-align: center;
+				line-height: 23px;
+				font-size: 14px;
+				border-radius: 3px;
+			}
+/* 中间部分 */
+section{
+	width: 100%;
+	height: auto;
+	border-bottom:1px solid #ccc;
+	box-shadow: 6px 6px #ccc;
+}
+	section aside:first-child{
+		width: 100%;
+		height: auto;
+		display: -webkit-box;
+		padding-left:10px;
+		margin:10px 0px;
+		-webkit-box-sizing:border-box;
+	}
+		section aside:first-child div{
+			margin:0 20px;
+		}
+
+			section aside img{
+				display:inline-block;
+			}
+			.text{
+				width: 34px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+			}
+			section aside:last-child{
+				width: 100%;
+				height: auto;	
+				
+			}
+				section aside:last-child dl{
+					display: -webkit-box;
+					-webkit-box-align:center;
+					padding:10px 0;
+					border-top: 1px solid #ccc;
+				}
+					section aside:last-child dl dt{
+						padding:0 10px;
+
+					}
+					section aside:last-child dl dd{
+						-webkit-box-flex:1;
+					}	
+						section aside:last-child dl dd div{
+							display: -webkit-box;
+							padding: 4px 0;
+							-webkit-box-align:center;
+							-webkit-box-pack:justify;
+							-webkit-box-sizing:border-box;
+							padding:0px 15px;
+						}
+							section aside:last-child dl dd div h1{
+								padding-bottom: 10px;
+							}
+
+/* 页脚部分 */
+.footer{
+	width: 100%;
+	height: 186px;
+	margin:20px 0;
+	border-top: 1px solid #ccc;
+}
+.footer img{
+	display: inline-block;
+}
+	.footer aside:first-child{
+		padding:12px 0;
+		font-size: 20px;
+	}
+	.footer aside:last-child{
+		width: 100%;
+		height: auto;
+		text-align: center;
+		display: -webkit-box;
+	}
+		.footer aside:last-child dl{
+			-webkit-box-flex:1;
+			-webkit-box-sizing:border-box;
+		}	
+			.footer aside:last-child dl dd{
+				padding-top: 20px;
+			}
+				.footer aside:last-child dl dd h1{
+					line-height: 25px;
+				}
+.foot{
+	width: 100%;
+	height: auto;
+	display: -webkit-box;
+}
+	.foot{
+		display: -webkit-box;
+		width: 100%;
+		height: auto;
+	}
+	.foot aside:first-child{
+		
+		background: #000;
+		-webkit-box-flex:1;
+		color: #fff;
+		-webkit-box-align:center;
+		text-align: center;
+		line-height: 30px;
+	}
+	.asd{
+		display: -webkit-box;
+		-webkit-box-align:center;
+	}
+		.asd div:first-child{
+			padding:0 10px;
+		}
+		.asd div:nth-child(2){
+			padding:0 5px;
+		}
+		.asd div:nth-child(3){
+			line-height: 20px;
+			font-size: 16px;
+			-webkit-box-flex:1;
+			text-align: center;
+		}
+	.foot aside:last-child{
+		/* -webkit-box-sizing:border-box; */
+		text-align: center;
+		background: #F15352;
+		line-height: 65px;
+		color: #fff;
+		width: 110px;
+		height: 65px;
+		font-size: 20px;
+	}

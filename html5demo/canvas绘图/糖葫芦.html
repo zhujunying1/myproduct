@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>糖葫芦</title>
+</head>
+<body>
+	<canvas id="cirs" width="1000" height="600">对不起，您的浏览器不支持绘图！</canvas>
+	<script type="text/javascript">
+		var cirs=document.getElementById("cirs");
+		var obj=cirs.getContext("2d");
+		for(var i=0;i<20;i++){
+			obj.beginPath();
+			obj.arc(20*i,20*i,i,0,2*Math.PI,true);
+			obj.closePath();
+			obj.fillStyle="rgba(70,200,10,0.5)";
+			obj.fill();
+		}
+	</script>
+</body>
+</html>

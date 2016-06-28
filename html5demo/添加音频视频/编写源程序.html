@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function checkAudio(){
+			var myAudio=document.createElement("audio");
+			if(myAudio.canPlayType){
+				alert("加载正常");
+			}else{
+				alert("浏览器不支持audio内容");	
+			}
+		}
+		window.onload=function(){
+			checkAudio();
+		}
+	</script>
+</body>
+</html>

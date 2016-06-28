@@ -1,0 +1,66 @@
+#section aside:nth-of-type(1) {
+  height: 85px;
+  border-bottom: 1px solid red;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  position: relative;
+  background: #fff;
+  font-size: 25px;
+  color: red;
+}
+#section aside:nth-of-type(1) p {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+#section aside:nth-of-type(2) {
+  position: relative;
+}
+#section aside:nth-of-type(2) img {
+  width: 100%;
+  display: block;
+}
+#section aside:nth-of-type(2) a {
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  color: red;
+  font-size: 18px;
+}
+#section aside:nth-of-type(3) {
+  padding: 20px 0;
+  background: #fff;
+  display: -webkit-box;
+  margin-bottom: 10px;
+}
+#section aside:nth-of-type(3) dl {
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+#section aside:nth-of-type(4) div:nth-of-type(1),
+#section aside:nth-of-type(4) div:nth-of-type(3),
+#section aside:nth-of-type(4) div:nth-of-type(4),
+#section aside:nth-of-type(4) div:nth-of-type(5) {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  padding: 20px 10px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+#section aside:nth-of-type(4) div:nth-of-type(1) a,
+#section aside:nth-of-type(4) div:nth-of-type(3) a,
+#section aside:nth-of-type(4) div:nth-of-type(4) a,
+#section aside:nth-of-type(4) div:nth-of-type(5) a {
+  font-size: 12px;
+}
+#section aside:nth-of-type(4) div:nth-of-type(2) {
+  display: -webkit-box;
+  padding: 20px 0;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+#section aside:nth-of-type(4) div:nth-of-type(2) dl {
+  -webkit-box-flex: 1;
+  text-align: center;
+}

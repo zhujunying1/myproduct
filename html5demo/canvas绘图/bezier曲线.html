@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		#myCanvas{
+			border:1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="1100" height="700">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var rect=document.getElementById("myCanvas");
+		//创建绘制2d对象
+		var obj=rect.getContext("2d");
+		obj.beginPath();
+		obj.bezierCurveTo(0,0,800,800,10,200);
+		obj.bezierCurveTo(0,0,800,800,200,700);
+		obj.closePath();
+		obj.strokeStyle="blue";
+		obj.stroke();
+	</script>
+</body>
+</html>

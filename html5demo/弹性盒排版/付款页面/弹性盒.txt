@@ -1,0 +1,24 @@
+css3 
+box: 弹性盒 在移动端 替换float 属性，加在父元素上 ******
+	-moz-css3 样式  /* Firefox */
+	-webkit-css3样式 /* Safari 和 Chrome */]
+    display:-moz-box;
+    display:-webkit-box;
+    
+box-flex 属性规定框的子元素是否可伸缩其尺寸  按照元素中的内容 多少分配   ***** 
+		box-flex:1  默认平均分配
+        如果 其中有元素定宽 剩下的宽度，平均分配到其他元素上
+        
+box-orient 属性规定框的子元素应该被水平或垂直排列。 父元素
+    horizontal 在水平行中从左向右排列子元素。 左中右  默认
+    vertical 从上向下垂直排列子元素。   上中下
+
+	-webkit-box-orient:vertical;
+	-moz-box-orient:vertical;
+box-direction 属性规定框元素的子元素以什么方向来排列。
+	reverse 以反方向显示子元素。     
+    
+box-align 属性规定如何对齐框的子元素。   类似 line-height;
+	box-align:center
+    
+ 其他的 可伸缩框属性（Flexible Box） 了解

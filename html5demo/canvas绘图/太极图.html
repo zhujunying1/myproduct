@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		#myCanvas{
+			border:1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="800" height="800">抱歉，您的浏览器不支持绘图！</canvas>
+	<script type="text/javascript">
+		var o=document.getElementById("myCanvas");
+		var obj=o.getContext("2d");//获取平面对象
+		//绘制外围边框
+		obj.strokeStyle="purple";
+		obj.beginPath();
+		obj.lineWidth="10";
+		obj.arc(400,400,200,0,2*Math.PI,true);
+		obj.stroke();
+
+		//绘制蓝半圆
+		obj.fillStyle="blue";
+		obj.beginPath();
+		obj.arc(400,400,200,0.5*Math.PI,1.5*Math.PI,false);
+		obj.fill();
+		
+		//绘制红半圆
+		obj.fillStyle="red";
+		obj.beginPath();
+		obj.arc(400,400,200,0.5*Math.PI,1.5*Math.PI,true);
+		obj.fill();
+
+		//绘制蓝色半圆
+		obj.fillStyle="blue";
+		obj.beginPath();
+		obj.arc(400,500,100,0.5*Math.PI,1.5*Math.PI,true);
+		obj.fill();
+
+		//绘制红色半圆
+		obj.fillStyle="red";
+		obj.beginPath();
+		obj.arc(400,300,100,0.5*Math.PI,1.5*Math.PI,false);
+		obj.fill();
+
+		//绘制红色小圆
+		obj.fillStyle="red";
+		obj.beginPath();
+		obj.arc(400,500,50,0,2*Math.PI,false);
+		obj.fill();
+
+		//绘制蓝色小圆
+		obj.fillStyle="blue";
+		obj.beginPath();
+		obj.arc(400,300,50,0,2*Math.PI,false);
+		obj.fill();
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<canvas id="myCanvas" width="400" height="400">抱歉，您的浏览器不支持canvas！</canvas>
+	<script type="text/javascript">
+		var rect=document.getElementById("myCanvas");
+		//创建绘制2d对象
+		var obj=rect.getContext("2d");
+		//设定边框色
+		obj.strokeStyle="red";
+		//设定矩形框区域
+		obj.strokeRect(10,10,100,50);
+		obj.stroke();//执行填充
+	</script>
+</body>
+</html>

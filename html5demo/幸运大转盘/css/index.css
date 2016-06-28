@@ -1,0 +1,101 @@
+@media all and (min-width:320px ) {
+	html,body{
+		width: 100%;
+		height: auto;
+	}
+}
+article{
+	width: 100%;
+	height: auto;
+	background: url(../img/bg-zp.png);
+}
+/* 头部区域 */
+	.head{
+		width: 100%;
+		height: auto;
+	}
+		.head aside{
+			width: 100%;
+			height: auto;
+		}
+			.head aside img{
+				width: 100%;
+				display: block;
+			}
+		.head nav{
+			width: 100%;
+			height: auto;
+			color: white;
+			background:url(../img/bg.jpg);
+			display: -webkit-box;
+			-webkit-box-align:center;
+			-webkit-box-pack:justify;
+		}
+
+/* 主题区域 */
+	section{
+		width: 100%;
+		height: auto;
+	}
+		section h1{
+			margin-top: 20px;
+			line-height: 40px;
+			font-size: 20px;
+			color:orange;
+			text-align: center;
+		}
+			section h1 span{
+				font-size: 25px;
+				color:purple;
+				margin: 0 10px;
+			}
+		section aside{
+			width: 90%;
+			height: auto;
+			margin: 20px auto;
+			position: relative;
+		}
+			section aside img{
+				width: 100%;
+			}
+			section aside img:last-child{
+				width: 30%;
+				-webkit-transform-origin: 49% 55%;
+				position: absolute;
+				left:35%;
+				top: 30%;
+			}
+
+/* 底部区域 */
+	footer{
+		width: 100%;
+		margin-top: 50px;
+	}
+		footer section{
+			width: 95%;
+			color:white;
+			margin: 20px auto;
+		}
+			footer section h2{
+				width: 100%;
+				height: auto;
+				line-height: 30px;
+				text-indent: 2em;
+				background:url(../img/bg-bq.png) no-repeat;
+				background-size: 40% auto;
+			}
+			footer section marquee{
+				width: 100%;
+				height: 30px;
+				padding-left: 30px;
+				line-height: 30px;
+			}
+			footer section ul{
+				padding-left: 20px;
+				line-height: 25px;
+			}
+		footer section:last-child{
+			text-align: center;
+			line-height: 30px;
+			padding-bottom: 20px;
+		}

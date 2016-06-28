@@ -1,0 +1,97 @@
+body,html{
+	width: 100%;
+	height: auto;
+}
+	section{
+		width: 100%;
+		height: auto;
+		background-image: url(../img/bg-zp.png);
+	}
+	/*头部区域*/
+	header{
+		width: 100%;
+		height: auto;
+	}
+		header .div img{
+			width: 100%;
+			display:block;
+		}
+		header nav{
+			display: -webkit-box;
+			display: -moz-box;
+			display: -o-box;
+			-webkit-box-align:center;/*垂直方向上的居中对齐*/
+			-webkit-box-pack:justify;/*水平方向上的两端对齐*/
+			width: 100%-40px;
+			color: #fff;
+			padding:0 20px;
+			background-image: url(../img/bg.jpg);
+		}
+		header nav img{
+			width: 50%;
+		}
+	/*中间区域*/
+		article{
+			width: 70%;
+			margin:20px auto;
+			height: auto;
+			position: relative;
+			padding-bottom: 20px;
+		}
+			article h1{
+				font-size: 20px;
+				color: #fff;
+				text-align: center;
+				padding-bottom: 20px;
+			}
+				article h1 span{
+					font-size: 25px;
+					color: yellow;
+					padding:0 10px;
+				}
+			article div img{
+				width: 100%;
+			}
+			article div img:last-child{
+				width: 36%;
+				-webkit-transform-origin:49% 55%;
+				position: absolute;
+				left: 32%;
+				top: 36%;
+			}
+
+			/*底部区域*/
+	footer{
+
+	}
+	marquee a{
+		color: yellow;padding:0 3m0px;
+	}
+	.h1{
+		width: 100%;
+		line-height: 30px;
+		height: 30px;
+		padding-left: 50px;
+		margin-top: 30px;
+		margin-bottom:30px;
+		font-size: 20px;
+		color: #fff;
+		background: url(../img/bg-bq.png) no-repeat 20px; 
+		background-size: 200px auto;
+	}
+	.ula{
+		padding-left: 30px;
+	}
+		.ula li{
+			line-height: 25px;
+			
+		}
+			.ula li a{`		`f8i901q234567890=	DFJL
+			 				color: #fff;
+			}
+	footer p{
+		width: 100%;
+		text-align: center;
+		line-height: 50px;
+		padding-bottom: 20px;
+	}
